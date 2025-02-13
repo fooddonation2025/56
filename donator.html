@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Food Waste Donation System</title>
+  <header>
+    <a href="about.html"  style="text-decoration: none;">
+      <img src="hunger.png" alt="Logo" style="height: 90px; vertical-align: middle; margin-right: 10px;">
+    </a>
+    Secure Food Waste Donation System
+  </header>
+  
+  
+    
+   
+  
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #f6d365, #fda085);
+      color: #333;
+    }
+    button a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  background: linear-gradient(120deg, #43cea2, #185a9d);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+button h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  background: linear-gradient(120deg, #43cea2, #185a9d);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+button h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+    header {
+      background: linear-gradient(120deg, #43cea2, #185a9d);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+      border-bottom: 5px solid #fda085;
+    }
+  
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #43cea2;
+      text-align: center;
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #43cea2;
+      box-shadow: 0 0 8px rgba(67, 206, 162, 0.4);
+      outline: none;
+    }
+
+    button {
+      background: linear-gradient(120deg, #43cea2, #185a9d);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Available Donations Section Enhancements */
+    ul#donations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul#donations li {
+      list-style: none;
+      width: calc(33.33% - 1rem);
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    ul#donations li:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    ul#donations li .details {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    ul#donations li .details strong {
+      font-size: 1.2rem;
+      color: #185a9d;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    ul#donations li button {
+      background: linear-gradient(120deg, #ff512f, #dd2476);
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      align-self: flex-end;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    ul#donations li button:hover {
+      background: linear-gradient(120deg, #dd2476, #ff512f);
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive Adjustments for Cards */
+    @media (max-width: 768px) {
+      ul#donations li {
+        width: calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 480px) {
+      ul#donations li {
+        width: 100%;
+      }
+    }
+
+    footer {
+      background: linear-gradient(120deg, #43cea2, #185a9d);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      border-top: 5px solid #fda085;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+
+  <main>
+    <section>
+      <h2>Donate Food</h2>
+      <form id="donationForm" action="https://formsubmit.co/your-humanerror0729@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  
+  <label for="foodName">Food Name:</label>
+  <input type="text" name="foodName" id="foodName" placeholder="Enter food name" required>
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" name="quantity" id="quantity" placeholder="Enter quantity (e.g., kg, servings)" required>
+
+  <label for="district">District:</label>
+  <select name="district" id="district" required onchange="updateAreas()">
+    <option value="" disabled selected>Select Your District</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Coimbatore">Coimbatore</option>
+    <option value="Madurai">Madurai</option>
+    <option value="Trichy">Trichy</option>
+    <option value="Salem">Salem</option>
+    <option value="Erode">Erode</option>
+    <option value="Tirunelveli">Tirunelveli</option>
+    <option value="Vellore">Vellore</option>
+    <option value="Tiruppur">Tiruppur</option>
+    <option value="Dharmapuri">Dharmapuri</option>
+    <option value="Kanchipuram">Kanchipuram</option>
+    <option value="Karur">Karur</option>
+    <option value="Namakkal">Namakkal</option>
+    <option value="Pudukkottai">Pudukkottai</option>
+    <option value="Cuddalore">Cuddalore</option>
+  </select>
+
+  <label for="area">Area:</label>
+  <select name="area" id="area" required>
+    <option value="" disabled selected>Select Your Area or Type</option>
+  </select>
+  <input type="text" name="customArea" id="customArea" placeholder="Type your area (if not listed)" style="display:none;" oninput="toggleCustomArea()">
+
+  <label for="expiryDate">Expiry Time:</label>
+  <input type="time" name="expiryDate" id="expiryDate" required>
+
+  <label for="phoneNumber">Phone Number:</label>
+  <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number" required>
+
+  <button type="submit">Submit Donation</button>
+</form>
+    </section>
+
+    <section>
+      <h2>Available Donations</h2>
+      <ul id="donations">
+        <!-- Donation items will appear here dynamically -->
+      </ul>
+    </section>
+  </main>
+<button ><a href="about.html"><H1>ABOUT US</H1></a></button>
+  <footer>
+    &copy; 2024 Secure Food Waste Donation System. All rights reserved.
+  </footer>
+
+  <script>
+    // Key for localStorage
+    const donationStorageKey = "secureDonations";
+
+    // Define areas for each district
+    const areas = {
+      Chennai: ["Anna Nagar", "T Nagar", "Adyar", "Mylapore"],
+      Coimbatore: ["R.S. Puram", "Peelamedu", "Race Course", "Singanallur"],
+      Madurai: ["Melur", "Anna Nagar", "Simmakkal", "K.K. Nagar"],
+      Trichy: ["Srirangam", "Thillai Nagar", "Tidel Park", "Kumarapalayam"],
+      Salem: ["Hasthampatti", "Salem Fort", "Fairlands", "Nethaji Nagar"],
+      Erode: ["Sathy Road", "Brough Road", "Surampatti", "Muthukadai"],
+      Tirunelveli: ["Tirunelveli Town", "Palayamkottai", "Sathankulam", "Sankarankovil"],
+      Vellore: ["Katpadi", "Chittoor", "Ariyalur", "Nandhivaram"],
+      Tiruppur: ["Tiruppur North", "Tiruppur South", "Sivanmalai", "Perumanallur"],
+      Dharmapuri: ["Dharmapuri Town", "Palacode", "Bargur", "Pappireddipatti"],
+      Kanchipuram: ["Kanchipuram Town", "Uthiramerur", "Maduranthakam", "Sriperumbudur"],
+      Karur: ["Karur Town", "Pugalur", "Kavindapadi", "Vengamedu"],
+      Namakkal: ["Namakkal Town", "Paramathi", "Rasipuram", "Tiruchengode"],
+      Pudukkottai: ["Pudukkottai Town", "Alangudi", "Aranthangi", "Ilupur"],
+      Cuddalore: ["Cuddalore Town", "Bhuvanagiri", "Chidambaram", "Parangipettai"]
+    };
+
+    // Update areas based on selected district
+    function updateAreas() {
+      const district = document.getElementById("district").value;
+      const areaSelect = document.getElementById("area");
+      const customAreaInput = document.getElementById("customArea");
+
+      areaSelect.innerHTML = "<option value='' disabled selected>Select Your Area or Type</option>";
+
+      if (district && areas[district]) {
+        areas[district].forEach(area => {
+          const option = document.createElement("option");
+          option.value = area;
+          option.textContent = area;
+          areaSelect.appendChild(option);
+        });
+        areaSelect.style.display = "block";
+        customAreaInput.style.display = "none"; // Hide text input by default
+      } else {
+        areaSelect.style.display = "none";
+        customAreaInput.style.display = "block"; // Show text input
+      }
+    }
+
+    // Toggle display of custom area input
+    function toggleCustomArea() {
+      const areaSelect = document.getElementById("area");
+      const customAreaInput = document.getElementById("customArea");
+
+      if (customAreaInput.value) {
+        areaSelect.style.display = "none";
+      } else {
+        areaSelect.style.display = "block";
+      }
+    }
+
+    // Save donations to localStorage
+    function getDonations() {
+      const donations = JSON.parse(localStorage.getItem(donationStorageKey)) || [];
+      return donations;
+    }
+
+    function saveDonations(donations) {
+      localStorage.setItem(donationStorageKey, JSON.stringify(donations));
+    }
+
+    // Render donations
+    function renderDonations() {
+      const donations = getDonations();
+      const donationsList = document.getElementById("donations");
+      donationsList.innerHTML = "";
+      donations.forEach((donation, index) => {
+        const donationItem = document.createElement("li");
+
+        donationItem.innerHTML = `
+          <div class="details">
+            <strong>Food Name:</strong> ${donation.foodName}<br>
+            <strong>Quantity:</strong> ${donation.quantity}<br>
+            <strong>District:</strong> ${donation.district}<br>
+            <strong>Area:</strong> ${donation.area || donation.customArea}<br>
+            <strong>Expiry Time:</strong> ${donation.expiryDate}<br>
+            <strong>Phone Number:</strong> ${donation.phoneNumber}
+          </div>
+          <button onclick="deleteDonation(${index})">Delete Donation</button>
+        `;
+
+        donationsList.appendChild(donationItem);
+      });
+    }
+
+    // Handle donation form submission
+    document.getElementById("donationForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const foodName = document.getElementById("foodName").value;
+      const quantity = document.getElementById("quantity").value;
+      const district = document.getElementById("district").value;
+      const area = document.getElementById("area").value;
+      const customArea = document.getElementById("customArea").value;
+      const expiryDate = document.getElementById("expiryDate").value;
+      const phoneNumber = document.getElementById("phoneNumber").value;
+
+      if (!foodName || !quantity || !district || (!area && !customArea) || !expiryDate || !phoneNumber) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      const newDonation = {
+        foodName,
+        quantity,
+        district,
+        area: area || customArea,
+        expiryDate,
+        phoneNumber
+      };
+
+      const donations = getDonations();
+      donations.push(newDonation);
+      saveDonations(donations);
+      renderDonations();
+
+      // Reset form after submission
+      document.getElementById("donationForm").reset();
+      document.getElementById("area").innerHTML = "<option value='' disabled selected>Select Your Area or Type</option>";
+    });
+
+    // Delete a donation
+    function deleteDonation(index) {
+      const donations = getDonations();
+      donations.splice(index, 1);
+      saveDonations(donations);
+      renderDonations();
+    }
+
+    // Initial render
+    renderDonations();
+  </script>
+</body>
+</html>
