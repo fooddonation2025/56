@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+0<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -259,17 +259,15 @@ button h1 {
   <main>
     <section>
       <h2>Donate Food</h2>
-      <form id="donationForm" action="https://formsubmit.co/your-humanerror0729@gmail.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  
+      <form action="https://formcarry.com/s/t_gLP0XVD3n" method="POST">
   <label for="foodName">Food Name:</label>
-  <input type="text" name="foodName" id="foodName" placeholder="Enter food name" required>
+  <input type="text" id="foodName" name="foodName" placeholder="Enter food name" required>
 
   <label for="quantity">Quantity:</label>
-  <input type="number" name="quantity" id="quantity" placeholder="Enter quantity (e.g., kg, servings)" required>
+  <input type="number" id="quantity" name="quantity" placeholder="Enter quantity (e.g., kg, servings)" required>
 
   <label for="district">District:</label>
-  <select name="district" id="district" required onchange="updateAreas()">
+  <select id="district" name="district" required onchange="updateAreas()">
     <option value="" disabled selected>Select Your District</option>
     <option value="Chennai">Chennai</option>
     <option value="Coimbatore">Coimbatore</option>
@@ -289,19 +287,27 @@ button h1 {
   </select>
 
   <label for="area">Area:</label>
-  <select name="area" id="area" required>
+  <select id="area" name="area" required>
     <option value="" disabled selected>Select Your Area or Type</option>
   </select>
-  <input type="text" name="customArea" id="customArea" placeholder="Type your area (if not listed)" style="display:none;" oninput="toggleCustomArea()">
+  <input type="text" id="customArea" name="customArea" placeholder="Type your area (if not listed)" style="display:none;" oninput="toggleCustomArea()">
 
   <label for="expiryDate">Expiry Time:</label>
-  <input type="time" name="expiryDate" id="expiryDate" required>
+  <input type="time" id="expiryDate" name="expiryDate" required>
 
   <label for="phoneNumber">Phone Number:</label>
-  <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number" required>
+  <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required>
+  <input type="hidden" name="_autoresponse" value="Thank you for your message! We will contact you soon.">
+  <input type="hidden" name="_redirect" value="http://fooddonation2025.github.io/Secure-Food-Waste-Donation-System/">
+ <input type="hidden" name="_redirect" value=".">
+
+  <input type="text" name="_gotcha" style="display: none;">
+
 
   <button type="submit">Submit Donation</button>
+      
 </form>
+
     </section>
 
     <section>
